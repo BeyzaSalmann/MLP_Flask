@@ -4,11 +4,11 @@ Bu proje, kişisel sağlık verilerini kullanarak bireylerin tahmini yıllık si
 
 Projede **Multiple Linear Regression (Çoklu Doğrusal Regresyon)** algoritması kullanılmış ve modelin doğruluğunu artırmak için **Backward Elimination (Geriye Doğru Eleme)** yöntemi ile istatistiksel özellik seçimi yapılmıştır.
 
-##  Projenin Amacı ve Yöntem
+## Projenin Amacı ve Yöntem
 
 Sigorta veri seti üzerinde çalışılarak, kişilerin yaş, BMI (Vücut Kitle Endeksi), çocuk sayısı ve sigara kullanım durumu gibi özelliklerine göre ne kadar sigorta primi ödeyeceği tahmin edilmektedir.
 
-###  Uygulanan Adımlar:
+### Uygulanan Adımlar:
 1. **Veri Ön İşleme:**
    - Kategorik değişkenler (Cinsiyet, Sigara, Bölge) **Label Encoding** yöntemi ile sayısallaştırıldı.
    - Kayıp veri (Missing Value) analizi yapıldı (Veri seti temiz çıktı).
@@ -22,7 +22,7 @@ Sigorta veri seti üzerinde çalışılarak, kişilerin yaş, BMI (Vücut Kitle 
    - Eğitilen model `.pkl` formatında kaydedildi.
    - **Flask** framework'ü kullanılarak kullanıcı dostu bir web arayüzü geliştirildi.
 
-##  Proje Dosyaları
+## Proje Dosyaları
 
 * **`MLP_Flask.ipynb`**: Veri analizi, model eğitimi, P-value kontrolleri ve hata metriklerinin (MSE, MAE, R2) hesaplandığı kaynak kod dosyası.
 * **`app.py`**: Modelin çalıştığı Flask web sunucusu.
@@ -37,7 +37,7 @@ Eğitim sonucunda elde edilen metrikler:
 * **R² Skoru:** ~0.78 (Model veriyi %78 oranında açıklayabilmektedir)
 * **Kullanılan Kütüphaneler:** Pandas, Scikit-learn, Statsmodels, Flask
 
-##  Kurulum ve Çalıştırma
+## Kurulum ve Çalıştırma
 
 Projeyi yerel bilgisayarınızda çalıştırmak için:
 
