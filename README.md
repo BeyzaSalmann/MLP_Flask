@@ -45,3 +45,19 @@ Projeyi yerel bilgisayarınızda çalıştırmak için:
 2. **Gerekli kütüphaneleri yükleyin:**
    ```bash
    pip install -r requirements.txt
+
+   ##  Uygulama Arayüzü
+
+Projenin web arayüzünün kullanım aşamaları aşağıdadır.
+
+### 1. İlk Açılış Ekranı (Veri Girişi)
+Kullanıcı uygulamayı ilk açtığında boş bir form ile karşılaşır:
+
+![Formun İlk Hali](form_ilk_hali.png)
+
+---
+
+### 2. Hesaplama Sonrası (Tahmin Sonucu)
+Kullanıcı verileri girip "HESAPLA" butonuna bastığında, tahmin edilen sigorta tutarı aynı sayfada gösterilir:
+
+![Hesaplama Sonrası](form_hesaplama_sonrasi.png)
