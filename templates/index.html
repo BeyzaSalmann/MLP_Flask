@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigorta Tahmin Sistemi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); height: 100vh; display: flex; align-items: center; justify-content: center; }
+        .card { border: none; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); width: 100%; max-width: 500px; }
+        .card-header { background-color: #0d6efd; color: white; text-align: center; border-radius: 15px 15px 0 0 !important; padding: 20px; }
+        .btn-primary { width: 100%; padding: 10px; font-weight: bold; }
+        .result-box { margin-top: 20px; padding: 15px; background-color: #d1e7dd; color: #0f5132; border-radius: 10px; text-align: center; font-size: 1.2em; border: 1px solid #badbcc; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>🏥 Sigorta Masrafı Hesapla</h3>
+        </div>
+        <div class="card-body p-4">
+            <form action="/predict" method="post">
+                
+                <div class="mb-3">
+                    <label class="form-label">Yaşınız:</label>
+                    <input type="number" name="age" class="form-control" placeholder="Örn: 25" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">BMI (Vücut Kitle İndeksi):</label>
+                    <input type="number" step="0.01" name="bmi" class="form-control" placeholder="Örn: 22.5" required>
+                    <div class="form-text" style="font-size: 12px;">Kilonuz / Boyunuzun Karesi (Örn: 70kg / 1.75m²)</div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Çocuk Sayısı:</label>
+                    <input type="number" name="children" class="form-control" value="0" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Sigara Kullanımı:</label>
+                    <select name="smoker" class="form-select">
+                        <option value="0">Hayır (Kullanmıyorum)</option>
+                        <option value="1">Evet (Kullanıyorum)</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Bölge:</label>
+                    <select name="region" class="form-select">
+                        <option value="0">Kuzeydoğu (Northeast)</option>
+                        <option value="1">Kuzeybatı (Northwest)</option>
+                        <option value="2">Güneydoğu (Southeast)</option>
+                        <option value="3">Güneybatı (Southwest)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">HESAPLA</button>
+            </form>
+
+            {% if prediction_text %}
+            <div class="result-box">
+                {{ prediction_text }}
+            </div>
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
