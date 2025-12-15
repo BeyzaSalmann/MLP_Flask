@@ -30,7 +30,7 @@ Sigorta veri seti üzerinde çalışılarak, kişilerin yaş, BMI (Vücut Kitle 
 * **`templates/index.html`**: Kullanıcıdan verilerin alındığı HTML arayüzü.
 * **`requirements.txt`**: Gerekli Python kütüphaneleri.
 
-## 📊Model Performansı
+## Model Performansı
 
 Eğitim sonucunda elde edilen metrikler:
 * **Algoritma:** Multiple Linear Regression
