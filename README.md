@@ -24,7 +24,7 @@ Sigorta veri seti üzerinde çalışılarak, kişilerin yaş, BMI (Vücut Kitle 
 
 ## Proje Dosyaları
 
-* **`MLP_Flask.ipynb`**: Veri analizi, model eğitimi, P-value kontrolleri ve hata metriklerinin (MSE, MAE, R2) hesaplandığı kaynak kod dosyası.
+* **`Sigorta_Tahmin_Modeli.ipynb`**: Veri analizi, model eğitimi, P-value kontrolleri ve hata metriklerinin (MSE, MAE, R2) hesaplandığı kaynak kod dosyası.
 * **`app.py`**: Modelin çalıştığı Flask web sunucusu.
 * **`insurance_model.pkl`**: Eğitilmiş regresyon modeli.
 * **`templates/index.html`**: Kullanıcıdan verilerin alındığı HTML arayüzü.
